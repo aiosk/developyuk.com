@@ -1,0 +1,1 @@
+"use strict";$(function(){$(".main__center").on("click",function(n){var t=$(n.target),a=t.closest(".main");a.toggleClass("main--loaded")})});
