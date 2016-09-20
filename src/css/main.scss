@@ -1,0 +1,65 @@
+@import "_bem";
+@import "foundation.scss";
+
+html, body {
+  height: 100%;
+}
+
+$loc-img: '../img';
+.main {
+  transition-duration: 2s;
+  height: 100%;
+  position: relative;
+
+  $height: 4rem;
+  @include e('center') {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    @include clearfix();
+    @include at('loaded') {
+      //min-width: 500px + 10px;
+    }
+  }
+
+  @include p('e:logo', 'e:text') {
+    float: left;
+    @include breakpoint(medium down) {
+      float:none
+    }
+    height: $height;
+    min-width: $height;
+    background: {
+      repeat: no-repeat;
+      position: center center;
+      size: contain;
+    }
+  }
+
+  @include e('logo') {
+    cursor: pointer;
+    background-image: url('#{$loc-img}/logo.png');
+
+    @include at('loaded') {
+      background-image: url('#{$loc-img}/logo--white.png');
+    }
+
+  }
+  @include e('text') {
+    display: none;
+    background-image: url('#{$loc-img}/logo__text.png');
+    background-position: 0 1rem;
+    margin-left: 10px;
+    //width: calc(100% - #{$height + 10px + 5px});
+    width: $height*4 + rem-calc(50px);
+    @include at('loaded') {
+      display: block;
+      background-image: url('#{$loc-img}/logo__text--white.png');
+    }
+  }
+
+  @include m('loaded') {
+    background: #ccc;
+  }
+}
