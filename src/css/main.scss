@@ -1,11 +1,13 @@
-@import "_bem";
-@import "foundation.scss";
+@import "../../node_modules/sass-bem/bem";
+@import "../../node_modules/foundation-sites/scss/foundation";
 
 html, body {
   height: 100%;
 }
 
-$loc-img: '../img';
+$img-location: '../img';
+$img-suffix: '-min';
+
 .main {
   transition-duration: 2s;
   height: 100%;
@@ -26,7 +28,7 @@ $loc-img: '../img';
   @include p('e:logo', 'e:text') {
     float: left;
     @include breakpoint(medium down) {
-      float:none
+      float: none
     }
     height: $height;
     min-width: $height;
@@ -39,23 +41,23 @@ $loc-img: '../img';
 
   @include e('logo') {
     cursor: pointer;
-    background-image: url('#{$loc-img}/logo.png');
+    background-image: url('#{$img-location}/logo#{$img-suffix}.png');
 
     @include at('loaded') {
-      background-image: url('#{$loc-img}/logo--white.png');
+      background-image: url('#{$img-location}/logo--white#{$img-suffix}.png');
     }
 
   }
   @include e('text') {
     display: none;
-    background-image: url('#{$loc-img}/logo__text.png');
+    background-image: url('#{$img-location}/logo__text#{$img-suffix}.png');
     background-position: 0 1rem;
     margin-left: 10px;
     //width: calc(100% - #{$height + 10px + 5px});
     width: $height*4 + rem-calc(50px);
     @include at('loaded') {
       display: block;
-      background-image: url('#{$loc-img}/logo__text--white.png');
+      background-image: url('#{$img-location}/logo__text--white#{$img-suffix}.png');
     }
   }
 
