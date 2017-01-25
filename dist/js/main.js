@@ -1,1 +1,1 @@
-"use strict";$(function(){$(".main__center").on("click",function(n){var t=$(n.target),a=t.closest(".main");a.toggleClass("main--loaded")})});
+"use strict";var addListener=function(e){var t=e.elem,n=e.type,a=e.fn;t.addEventListener?t.addEventListener(n,a,!1):t.attachEvent?t.attachEvent("on"+n,function(){return a.call(t,window.event)}):t["on"+n]=a};addListener({elem:document.querySelector(".main"),type:"click",fn:function(e){this.classList.toggle("main--loaded")}});
