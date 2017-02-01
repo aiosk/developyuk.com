@@ -1,67 +1,9 @@
 @import "../../node_modules/sass-bem/bem";
 @import "../../node_modules/foundation-sites/scss/foundation";
 
-html, body {
-  height: 100%;
-}
+@import "_base/var";
+@import "_base/_emoji/style";
 
-$img-location: '../img';
-$img-suffix: '-min';
-
-.main {
-  transition-duration: 2s;
-  height: 100%;
-  position: relative;
-
-  $height: 4rem;
-  @include e('center') {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    @include clearfix();
-    @include at('loaded') {
-      //min-width: 500px + 10px;
-    }
-  }
-
-  @include p('e:logo', 'e:text') {
-    float: left;
-    @include breakpoint(medium down) {
-      float: none
-    }
-    height: $height;
-    min-width: $height;
-    background: {
-      repeat: no-repeat;
-      position: center center;
-      size: contain;
-    }
-  }
-
-  @include e('logo') {
-    cursor: pointer;
-    background-image: url('#{$img-location}/logo#{$img-suffix}.png');
-
-    @include at('loaded') {
-      background-image: url('#{$img-location}/logo--white#{$img-suffix}.png');
-    }
-
-  }
-  @include e('text') {
-    display: none;
-    background-image: url('#{$img-location}/logo__text#{$img-suffix}.png');
-    background-position: 0 1rem;
-    margin-left: 10px;
-    //width: calc(100% - #{$height + 10px + 5px});
-    width: $height*4 + rem-calc(50px);
-    @include at('loaded') {
-      display: block;
-      background-image: url('#{$img-location}/logo__text--white#{$img-suffix}.png');
-    }
-  }
-
-  @include m('loaded') {
-    background: #ccc;
-  }
-}
+@import "_module/html";
+@import "_module/header";
+@import "_module/content";
