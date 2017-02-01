@@ -1,0 +1,7 @@
+header.logo {
+  background: url('#{$img-location}/logo.icon.white.small#{$img-suffix}.png') center center no-repeat/contain;
+  $size: 3rem;
+  width: $size;
+  height: $size;
+  margin: 1rem;
+}
