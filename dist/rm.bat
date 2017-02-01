@@ -1,1 +1,0 @@
-gsutil rm gs://www.developyuk.com/**
