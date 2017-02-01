@@ -35,12 +35,15 @@ $(()=> {
 
 
         $('.choosen-radio')
-            .find('.icon')
-            .addClass(`e-${radioIcon}`)
-            .end()
             .addClass('mui-enter-active')
+
+            .find('.icon').addClass(`mui-enter-active e-${radioIcon}`)
+            .end()
+
             .on('click', (e)=> {
-                $(e.currentTarget).removeClass('mui-enter-active');
+                $(e.currentTarget).removeClass('mui-enter-active')
+                    .find('.icon').removeClass().addClass('icon mui-enter');
+
                 $('input[type=radio]')
                     .next('i.icon').removeClass('is-active')
                     .end()
