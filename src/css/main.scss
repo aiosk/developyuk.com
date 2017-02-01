@@ -1,9 +1,9 @@
 @import "../../node_modules/sass-bem/bem";
 @import "../../node_modules/foundation-sites/scss/foundation";
+@import "../../node_modules/motion-ui/src/motion-ui";
 
 @import "_base/var";
 @import "_base/_emoji/style";
-
 @import "_module/html";
 @import "_module/header";
 @import "_module/content";

@@ -14,7 +14,9 @@
       margin-bottom: 0 !important;
     }
   }
+}
 
+@include b('content') {
   @include e('statement') {
     text-transform: uppercase;
     font-size: 2.1rem;
@@ -30,7 +32,9 @@
     }
     text-align: center;
   }
+}
 
+@include b('content') {
   @include e('answers') {
 
     form {
@@ -46,10 +50,35 @@
       .icon {
         font-size: 4.5rem;
         display: block;
+        //opacity: 0;
+        &.is-active {
+          color: rgb(222, 65, 218);
+        }
       }
       input {
         display: none;
       }
     }
+  }
+}
+
+@include b('content') {
+  .icon {
+    @include mui-spin($amount: 1.5turn, $duration: 1.5s, $timing: map-get($motion-ui-easings, bounce-in));
+  }
+}
+
+.choosen-radio {
+  @include mui-hinge(in, left, $axis: 'edge', $duration: 0.5s, $timing: map-get($motion-ui-easings, bounce-in));
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(222, 65, 218);
+  .icon {
+    @include absolute-center;
+    font-size: 10rem;
+    color: #fff;
   }
 }
