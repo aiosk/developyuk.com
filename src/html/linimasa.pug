@@ -5,6 +5,20 @@ block body-js
 
 block body-script
     :babel(presets=['es2015'])
+        const animateHeader = (debugTxt='')=>{
+            const logo = document.querySelector('nav');
+            let lastFile = document.referrer.split('/');
+            lastFile = lastFile[lastFile.length-1].trim();            
+            const isFromIndex = lastFile.length === 0 || lastFile === 'index.html'
+
+            if(isFromIndex){
+                logo.classList.add('animated','slideInLeftLogo');
+            }else{
+                logo.classList.add('noSlideInLeftLogo');
+            }
+        }
+        animateHeader('ready');
+
 
 block nav
     nav.nav

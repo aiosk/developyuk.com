@@ -3,8 +3,13 @@ header {
         display: inline-block;
     }
 
-    nav {
+    .nav {
         @include clearfix;
+        animation-duration: 300ms;
+        transform: translate3d(-64px,0,0);
+        @include m(index) {
+            transform: translate3d(0,0,0);
+        };
     }
 
     a {
@@ -32,5 +37,38 @@ header {
         line-height: 3rem;
         float: left;
         display: block;
+    }
+}
+
+.slideOutLeftLogo {
+    animation-name: slideOutLeftLogo;
+}
+
+.slideInLeftLogo {
+    animation-name: slideInLeftLogo;
+}
+.noSlideInLeftLogo{
+      transform: translate3d(0,0,0) !important;
+}
+@keyframes slideOutLeftLogo {
+    0% {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+    }
+
+    to {
+        // visibility:hidden;
+        transform: translate3d(-64px,0,0);
+    }
+}
+@keyframes slideInLeftLogo {
+    0% {
+        transform: translate3d(-64px,0,0);
+        // visibility: visible
+    }
+
+    to {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
     }
 }

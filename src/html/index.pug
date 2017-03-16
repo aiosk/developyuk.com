@@ -5,11 +5,16 @@ block body-js
 
 block body-script
     :babel(presets=['es2015'])
+        const animateHeader = ()=>{
+            const logo = document.querySelector('nav');
+            logo.classList.add('animated','slideOutLeftLogo');
+        }
 
 block body
     header    
         block nav
             nav.nav.nav--index
+                a(href='index.html')!= logo
                 a(href='linimasa.html') Linimasa
                 a(href='dapurproduksi.html') Dapur Produksi
     section
