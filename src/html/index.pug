@@ -6,26 +6,19 @@ block body-js
 block body-script
     :babel(presets=['es2015'])
 
-
 block body
-    header
-        .logo
-        a(href='#') jangan klik!
-    section.content
-        section.content__statement gimana keadaan kamu saat ini?
-        section.content__answers
-            form
-                label
-                    input(type='radio' name='feeling' value='tear' data-icon='f622')
-                    i.icon.e-f622.mui-enter
-                label
-                    input(type='radio' name='feeling' value='sleepy' data-icon='f634')
-                    i.icon.e-f634.mui-enter
-                label
-                    input(type='radio' name='feeling' value='sleepy' data-icon='f629')
-                    i.icon.e-f629.mui-enter
-                label
-                    input(type='radio' name='feeling' value='sad' data-icon='f61e')
-                    i.icon.e-f61e.mui-enter
-    .choosen-radio.mui-enter
-        .icon.mui-enter
+    header    
+        block nav
+            nav.nav.nav--index
+                a(href='linimasa.html') Linimasa
+                a(href='dapurproduksi.html') Dapur Produksi
+    section
+        block content
+            .content.content--index
+                p 
+                    em DEVELOP YUK! 
+                    | merupakan sebuah projek kolaboratif dalam bentuk konten yang bersifat independen
+                p Konten kami mengulas individu berbakat dan kreatif sesuai bidangnya, mengupas tren IPTEK, serta membahas isu yang berkaitan dengan kehidupan masyarakat modern
+
+    block footer
+        footer!= logo
