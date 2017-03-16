@@ -1,6 +1,7 @@
 header {
     .logo {
         display: inline-block;
+        @include vertical-center;
     }
 
     .nav {
@@ -17,24 +18,28 @@ header {
         color: #000;
         margin: 0 0.5rem;
         position: relative;
+        font-size: 14px;
 
         &:first-child {
             margin-left: 0;
+            width: 22px;
+            animation-duration: 200ms;
         }
         @include is(active) {
             &:after {
                 content: '';
                 background: #000;
                 display: block;
-                height: 0.25rem;
+                height: 2px;
                 position: absolute;
-                bottom: 0.35rem;
+                bottom: 0.125rem;
                 left: 0;
                 width: 100%;
             }
         };
-        height: 3rem;
-        line-height: 3rem;
+        $height: 30px;
+        height: $height;
+        line-height: $height;
         float: left;
         display: block;
     }
@@ -47,8 +52,44 @@ header {
 .slideInLeftLogo {
     animation-name: slideInLeftLogo;
 }
-.noSlideInLeftLogo{
-      transform: translate3d(0,0,0) !important;
+
+.slideOutLeftVisible {
+    animation-name: slideOutLeftVisible;
+}
+
+.slideInLeftVisible {
+    animation-name: slideInLeftVisible;
+}
+
+.noSlideInLeftLogo {
+    transform: translate3d(0,0,0) !important;
+}
+$slide: -38px;
+
+.noSlideOutLeftLogo {
+    transform: translate3d($slide,0,0) !important;
+
+    a:first-child {
+        visibility: hidden;
+    }
+}
+@keyframes slideOutLeftVisible {
+    0% {
+        visibility: visible;
+    }
+
+    to {
+        visibility: hidden;
+    }
+}
+@keyframes slideInLeftVisible {
+    0% {
+        visibility: hidden;
+    }
+
+    to {
+        visibility: visible;
+    }
 }
 @keyframes slideOutLeftLogo {
     0% {
@@ -57,13 +98,12 @@ header {
     }
 
     to {
-        // visibility:hidden;
-        transform: translate3d(-64px,0,0);
+        transform: translate3d($slide,0,0);
     }
 }
 @keyframes slideInLeftLogo {
     0% {
-        transform: translate3d(-64px,0,0);
+        transform: translate3d($slide,0,0);
         // visibility: visible
     }
 
