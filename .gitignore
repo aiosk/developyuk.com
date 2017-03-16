@@ -1,5 +1,7 @@
 .idea/
-dist/
+dist/*.html
+dist/js/*.js
+dist/css/*.css
 
 # Created by https://www.gitignore.io/api/node,webstorm,jetbrains
 
@@ -98,7 +100,7 @@ fabric.properties
 
 # *.iml
 # modules.xml
-# .idea/misc.xml 
+# .idea/misc.xml
 # *.ipr
 
 
@@ -153,7 +155,7 @@ fabric.properties
 
 # *.iml
 # modules.xml
-# .idea/misc.xml 
+# .idea/misc.xml
 # *.ipr
 #----------------------------------------------------------------------------------------------
 

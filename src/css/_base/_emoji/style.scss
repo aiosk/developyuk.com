@@ -1,0 +1,514 @@
+@import "variables";
+
+@font-face {
+  font-family: 'emoji';
+  src:  url('#{$icomoon-font-path}/emoji.eot?60ziky');
+  src:  url('#{$icomoon-font-path}/emoji.eot?60ziky#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/emoji.ttf?60ziky') format('truetype'),
+    url('#{$icomoon-font-path}/emoji.woff?60ziky') format('woff'),
+    url('#{$icomoon-font-path}/emoji.svg?60ziky#emoji') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.icon {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'emoji' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.e-f60a {
+  &:before {
+    content: $e-f60a;
+  }
+}
+.e-f60b {
+  &:before {
+    content: $e-f60b;
+  }
+}
+.e-f60c {
+  &:before {
+    content: $e-f60c;
+  }
+}
+.e-f60d {
+  &:before {
+    content: $e-f60d;
+  }
+}
+.e-f60e {
+  &:before {
+    content: $e-f60e;
+  }
+}
+.e-f60f {
+  &:before {
+    content: $e-f60f;
+  }
+}
+.e-f61a {
+  &:before {
+    content: $e-f61a;
+  }
+}
+.e-f61b {
+  &:before {
+    content: $e-f61b;
+  }
+}
+.e-f61c {
+  &:before {
+    content: $e-f61c;
+  }
+}
+.e-f61d {
+  &:before {
+    content: $e-f61d;
+  }
+}
+.e-f61e {
+  &:before {
+    content: $e-f61e;
+  }
+}
+.e-f61f {
+  &:before {
+    content: $e-f61f;
+  }
+}
+.e-f62a {
+  &:before {
+    content: $e-f62a;
+  }
+}
+.e-f62b {
+  &:before {
+    content: $e-f62b;
+  }
+}
+.e-f62c {
+  &:before {
+    content: $e-f62c;
+  }
+}
+.e-f62d {
+  &:before {
+    content: $e-f62d;
+  }
+}
+.e-f62e {
+  &:before {
+    content: $e-f62e;
+  }
+}
+.e-f62f {
+  &:before {
+    content: $e-f62f;
+  }
+}
+.e-f63a {
+  &:before {
+    content: $e-f63a;
+  }
+}
+.e-f63b {
+  &:before {
+    content: $e-f63b;
+  }
+}
+.e-f63c {
+  &:before {
+    content: $e-f63c;
+  }
+}
+.e-f63d {
+  &:before {
+    content: $e-f63d;
+  }
+}
+.e-f63e {
+  &:before {
+    content: $e-f63e;
+  }
+}
+.e-f63f {
+  &:before {
+    content: $e-f63f;
+  }
+}
+.e-f64a {
+  &:before {
+    content: $e-f64a;
+  }
+}
+.e-f64b {
+  &:before {
+    content: $e-f64b;
+  }
+}
+.e-f64d {
+  &:before {
+    content: $e-f64d;
+  }
+}
+.e-f64e {
+  &:before {
+    content: $e-f64e;
+  }
+}
+.e-f590 {
+  &:before {
+    content: $e-f590;
+  }
+}
+.e-f595 {
+  &:before {
+    content: $e-f595;
+  }
+}
+.e-f596 {
+  &:before {
+    content: $e-f596;
+  }
+}
+.e-f600 {
+  &:before {
+    content: $e-f600;
+  }
+}
+.e-f601 {
+  &:before {
+    content: $e-f601;
+  }
+}
+.e-f602 {
+  &:before {
+    content: $e-f602;
+  }
+}
+.e-f603 {
+  &:before {
+    content: $e-f603;
+  }
+}
+.e-f604 {
+  &:before {
+    content: $e-f604;
+  }
+}
+.e-f605 {
+  &:before {
+    content: $e-f605;
+  }
+}
+.e-f606 {
+  &:before {
+    content: $e-f606;
+  }
+}
+.e-f607 {
+  &:before {
+    content: $e-f607;
+  }
+}
+.e-f608 {
+  &:before {
+    content: $e-f608;
+  }
+}
+.e-f609 {
+  &:before {
+    content: $e-f609;
+  }
+}
+.e-f610 {
+  &:before {
+    content: $e-f610;
+  }
+}
+.e-f611 {
+  &:before {
+    content: $e-f611;
+  }
+}
+.e-f612 {
+  &:before {
+    content: $e-f612;
+  }
+}
+.e-f613 {
+  &:before {
+    content: $e-f613;
+  }
+}
+.e-f614 {
+  &:before {
+    content: $e-f614;
+  }
+}
+.e-f615 {
+  &:before {
+    content: $e-f615;
+  }
+}
+.e-f616 {
+  &:before {
+    content: $e-f616;
+  }
+}
+.e-f617 {
+  &:before {
+    content: $e-f617;
+  }
+}
+.e-f618 {
+  &:before {
+    content: $e-f618;
+  }
+}
+.e-f619 {
+  &:before {
+    content: $e-f619;
+  }
+}
+.e-f620 {
+  &:before {
+    content: $e-f620;
+  }
+}
+.e-f621 {
+  &:before {
+    content: $e-f621;
+  }
+}
+.e-f622 {
+  &:before {
+    content: $e-f622;
+  }
+}
+.e-f623 {
+  &:before {
+    content: $e-f623;
+  }
+}
+.e-f624 {
+  &:before {
+    content: $e-f624;
+  }
+}
+.e-f625 {
+  &:before {
+    content: $e-f625;
+  }
+}
+.e-f626 {
+  &:before {
+    content: $e-f626;
+  }
+}
+.e-f627 {
+  &:before {
+    content: $e-f627;
+  }
+}
+.e-f628 {
+  &:before {
+    content: $e-f628;
+  }
+}
+.e-f629 {
+  &:before {
+    content: $e-f629;
+  }
+}
+.e-f630 {
+  &:before {
+    content: $e-f630;
+  }
+}
+.e-f631 {
+  &:before {
+    content: $e-f631;
+  }
+}
+.e-f632 {
+  &:before {
+    content: $e-f632;
+  }
+}
+.e-f633 {
+  &:before {
+    content: $e-f633;
+  }
+}
+.e-f634 {
+  &:before {
+    content: $e-f634;
+  }
+}
+.e-f635 {
+  &:before {
+    content: $e-f635;
+  }
+}
+.e-f636 {
+  &:before {
+    content: $e-f636;
+  }
+}
+.e-f637 {
+  &:before {
+    content: $e-f637;
+  }
+}
+.e-f638 {
+  &:before {
+    content: $e-f638;
+  }
+}
+.e-f639 {
+  &:before {
+    content: $e-f639;
+  }
+}
+.e-f640 {
+  &:before {
+    content: $e-f640;
+  }
+}
+.e-f641 {
+  &:before {
+    content: $e-f641;
+  }
+}
+.e-f642 {
+  &:before {
+    content: $e-f642;
+  }
+}
+.e-f643 {
+  &:before {
+    content: $e-f643;
+  }
+}
+.e-f644 {
+  &:before {
+    content: $e-f644;
+  }
+}
+.e-f645 {
+  &:before {
+    content: $e-f645;
+  }
+}
+.e-f646 {
+  &:before {
+    content: $e-f646;
+  }
+}
+.e-f647 {
+  &:before {
+    content: $e-f647;
+  }
+}
+.e-f648 {
+  &:before {
+    content: $e-f648;
+  }
+}
+.e-f649 {
+  &:before {
+    content: $e-f649;
+  }
+}
+.e-f910 {
+  &:before {
+    content: $e-f910;
+  }
+}
+.e-f911 {
+  &:before {
+    content: $e-f911;
+  }
+}
+.e-f912 {
+  &:before {
+    content: $e-f912;
+  }
+}
+.e-f913 {
+  &:before {
+    content: $e-f913;
+  }
+}
+.e-f914 {
+  &:before {
+    content: $e-f914;
+  }
+}
+.e-f915 {
+  &:before {
+    content: $e-f915;
+  }
+}
+.e-f916 {
+  &:before {
+    content: $e-f916;
+  }
+}
+.e-f917 {
+  &:before {
+    content: $e-f917;
+  }
+}
+.e-f918 {
+  &:before {
+    content: $e-f918;
+  }
+}
+.e-f922 {
+  &:before {
+    content: $e-f922;
+  }
+}
+.e-f923 {
+  &:before {
+    content: $e-f923;
+  }
+}
+.e-f924 {
+  &:before {
+    content: $e-f924;
+  }
+}
+.e-f925 {
+  &:before {
+    content: $e-f925;
+  }
+}
+.e-f926 {
+  &:before {
+    content: $e-f926;
+  }
+}
+.e-f927 {
+  &:before {
+    content: $e-f927;
+  }
+}
+.e-2639 {
+  &:before {
+    content: $e-2639;
+  }
+}
+
