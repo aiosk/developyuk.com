@@ -6,35 +6,31 @@ block body-js
 block body-script
     :babel(presets=['es2015'])
         const animateHeader = ()=>{
-            const nav = document.querySelector('nav');
-            let lastFile = document.referrer.split('/');
-            lastFile = lastFile[lastFile.length-1].trim();            
-            const isFromIndex = lastFile.length === 0 || lastFile === 'index.html';
-
-            if(! isFromIndex){            
-                nav.querySelector('a:first-child').classList.add('animated','slideOutLeftVisible');
-                nav.classList.add('animated','slideOutLeftLogo');
+            if(! isFromIndex && ! isIndex){
+                $logo.classList.add('animated','slideOutLeftVisible');
+                $nav.classList.add('animated','slideOutLeftLogo');
             }else{
-                nav.querySelector('a:first-child').classList.add('slideOutLeftVisible');
-                nav.classList.add('noSlideOutLeftLogo');
+                $logo.classList.add('slideOutLeftVisible');
+                $nav.classList.add('noSlideOutLeftLogo');
             }
         }
         animateHeader();
 
 block body
-    header    
+    header
         block nav
             nav.nav.nav--index
                 a(href='index.html')!= logo
                 a(href='linimasa.html') Linimasa
                 a(href='dapurproduksi.html') Dapur Produksi
-    section
-        block content
-            .content.content--index
+
+    block content
+        section.section.section--index
+            .container: .content
                 p 
                     em DEVELOP YUK! 
                     | merupakan sebuah projek kolaboratif dalam bentuk konten yang bersifat independen
                 p Konten kami mengulas individu berbakat dan kreatif sesuai bidangnya, mengupas tren IPTEK, serta membahas isu yang berkaitan dengan kehidupan masyarakat modern
 
-    block footer
-        footer!= logo
+            block footer
+                footer!= logo 
