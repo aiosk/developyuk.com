@@ -1,66 +1,3 @@
-// body {
-//     @include breakpoint(medium) {
-//          @include grid-row();
-//     }
-// }
-//
-// .content--index,
-// header {
-//     padding: 1rem;
-//     // @include breakpoint(medium) {
-//     //     padding: 2rem;
-//     // }
-//     // @include breakpoint(large) {
-//     //     padding: 2rem 4rem;
-//     // }
-// }
-//
-// .footer,
-// .section {
-//     @include m(index) {
-//          @include breakpoint(medium){
-//             @include grid-col(6,0);
-//             width: 50% !important;
-//             height: calc(100% - #{$header-height});
-//         }
-//     }
-// }
-//
-// .content {
-//     height: 100%;
-//     @include m(index) {
-//          @include breakpoint(small only portrait){
-//             height: calc(100% - #{$header-height + 32px});
-//             margin-top: 2rem;
-//         }
-//     }
-// }
-//
-// .section {
-//     position: relative;
-//     width: 100%;
-//     height: calc(100% - #{$header-height});
-//     @include m(index) {
-//         @include breakpoint(medium) {
-//             .content--index {
-//                 height: auto;
-//                 @include vertical-center;
-//             }
-//         }
-//     }
-// }
-//
-// .footer {
-//     @include m(index) {
-//         @include breakpoint(medium) {
-//             position: relative;
-//
-//             .logo {
-//                 @include absolute-center;
-//             }
-//         }
-//     }
-// }
 
 .section--index,
 header {
@@ -87,8 +24,21 @@ header {
                 // width: 50%;
             }
         }
+        @include breakpoint(medium ) {
+             @include breakpoint(portrait ){
+                padding: 4rem;
+            }
+        }
         @include breakpoint(large) {
             padding: 4rem;
+        }
+    }
+}
+
+.container {
+    @include breakpoint(small only) {
+         @include breakpoint(portrait){
+            margin-top: 2rem;
         }
     }
 }
@@ -107,6 +57,5 @@ footer {
         @include breakpoint(medium) {
              @include absolute-center;
         }
-        // border-radius: 50%;
     }
 }
