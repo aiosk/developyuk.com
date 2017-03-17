@@ -6,7 +6,7 @@ block body-js
 block body-script
     :babel(presets=['es2015'])
         const animateHeader = ()=>{
-            if(! isFromIndex){            
+            if(! isFromIndex && ! isIndex){
                 $logo.classList.add('animated','slideOutLeftVisible');
                 $nav.classList.add('animated','slideOutLeftLogo');
             }else{
@@ -17,7 +17,7 @@ block body-script
         animateHeader();
 
 block body
-    header    
+    header
         block nav
             nav.nav.nav--index
                 a(href='index.html')!= logo
@@ -26,11 +26,11 @@ block body
 
     block content
         section.section.section--index
-            .content.content--index
+            .container: .content
                 p 
                     em DEVELOP YUK! 
                     | merupakan sebuah projek kolaboratif dalam bentuk konten yang bersifat independen
                 p Konten kami mengulas individu berbakat dan kreatif sesuai bidangnya, mengupas tren IPTEK, serta membahas isu yang berkaitan dengan kehidupan masyarakat modern
 
-    block footer
-        footer.footer.footer--index!= logo
+            block footer
+                footer!= logo 
