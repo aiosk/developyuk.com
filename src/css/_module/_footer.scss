@@ -1,22 +1,24 @@
 footer {
-    @mixin gantung {
-        position: absolute;
-        bottom: 0;
-        width: 100%;
-        margin-bottom: 2rem;
-    }
-    @include breakpoint(portrait) {
-         @include gantung;
-    }
-    @include breakpoint(medium) {
-         @include gantung;
-    };
+    $size: 6rem;
 
     .logo {
-        $size: 6rem;
         width: $size;
         height: $size;
         margin: 0 auto;
         display: block;
     }
+    position: relative;
+
+    // &:after {
+    //     content: ' ';
+    //     display: block;
+    //     width: $size+1rem;
+    //     height: $size+1rem;
+    //     border: medium solid #000;
+    //     border-radius: 50%;
+    //
+    //     position: absolute;
+    //     left: calc(50% - #{$size/2 + .4rem} );
+    //     top: calc(50% - #{$size/2 + .5rem} );
+    // }
 }

@@ -6,17 +6,12 @@ block body-js
 block body-script
     :babel(presets=['es2015'])
         const animateHeader = (debugTxt='')=>{
-            const nav = document.querySelector('nav');
-            let lastFile = document.referrer.split('/');
-            lastFile = lastFile[lastFile.length-1].trim();            
-            const isFromIndex = lastFile.length === 0 || lastFile === 'index.html'
-
             if(isFromIndex){
-                nav.querySelector('a:first-child').classList.add('animated','slideInLeftVisible');
-                nav.classList.add('animated','slideInLeftLogo');
+                $logo.classList.add('animated','slideInLeftVisible');
+                $nav.classList.add('animated','slideInLeftLogo');
             }else{
-                nav.querySelector('a:first-child').classList.add('slideInLeftVisible');
-                nav.classList.add('noSlideInLeftLogo');
+                $logo.classList.add('slideInLeftVisible');
+                $nav.classList.add('noSlideInLeftLogo');
             }
         }
         animateHeader('ready');
@@ -29,6 +24,5 @@ block nav
         a(href='dapurproduksi.html') Dapur Produksi
 
 block content
-    .content 
-
-block footer
+    section.section
+        .content 
