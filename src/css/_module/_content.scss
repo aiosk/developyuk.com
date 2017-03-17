@@ -8,6 +8,7 @@
     display: none;
 }
 $header-height: 62px;
+
 .content {
     background: rgb(207,216,221);
     height: calc(100% - #{$header-height});
