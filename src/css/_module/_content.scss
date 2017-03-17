@@ -7,16 +7,12 @@
 .hide {
     display: none;
 }
-
+$header-height: 62px;
 .content {
     background: rgb(207,216,221);
-    height: calc(100vh - 80px);
+    height: calc(100% - #{$header-height});
     @include m(index) {
         background: #fff;
-        height: 100%;
-        @include breakpoint(portrait) {
-            margin: 2rem 0;
-        }
     }
 
     p {

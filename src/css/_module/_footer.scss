@@ -1,16 +1,9 @@
 footer {
-    @mixin gantung {
+    @include breakpoint(portrait) {
         position: absolute;
         bottom: 0;
         width: 100%;
-        margin-bottom: 2rem;
     }
-    @include breakpoint(portrait) {
-         @include gantung;
-    }
-    @include breakpoint(medium) {
-         @include gantung;
-    };
 
     .logo {
         $size: 6rem;
