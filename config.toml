@@ -1,0 +1,4 @@
+baseURL = "http://developyuk.com/"
+languageCode = "id-id"
+title = "Develop Yuk!"
+enableRobotsTXT = true

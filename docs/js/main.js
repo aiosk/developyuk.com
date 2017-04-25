@@ -1,1 +1,0 @@
-"use strict";var lastFile=document.referrer.split("/");lastFile=lastFile[lastFile.length-1].trim();var currentFile=document.location.pathname.slice(1).trim(),isFromIndex=0===lastFile.length||"index.html"===lastFile,isIndex=0===currentFile.length||"index.html"===currentFile,$nav=document.querySelector("nav"),$logo=$nav.querySelector("a:first-child");
