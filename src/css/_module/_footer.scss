@@ -1,24 +1,34 @@
 footer {
-    $size: 6rem;
+    $size: 3rem;
+
+    $circle-factor: 4rem;
+    .logo_container {
+        position: relative;
+        width: $size+$circle-factor;
+        height: $size+$circle-factor;
+        margin: 0 auto;
+        position: relative;
+        &:before {
+            content: ' ';
+            z-index: -1;
+            display: block;
+            width: $size+$circle-factor;
+            height: $size+$circle-factor;
+            border: medium solid #000;
+            border-radius: 50%;
+            position: absolute;
+            left: calc(50% - #{$size/2 + $circle-factor/2} );
+            top: calc(50% - #{$size/2+ $circle-factor/2} );
+            background-color: #000;
+        }
+    }
 
     .logo {
+        display: block;
         width: $size;
         height: $size;
-        margin: 0 auto;
-        display: block;
+        @include absolute-center;
     }
-    position: relative;
 
-    // &:after {
-    //     content: ' ';
-    //     display: block;
-    //     width: $size+1rem;
-    //     height: $size+1rem;
-    //     border: medium solid #000;
-    //     border-radius: 50%;
-    //
-    //     position: absolute;
-    //     left: calc(50% - #{$size/2 + .4rem} );
-    //     top: calc(50% - #{$size/2 + .5rem} );
-    // }
+
 }
